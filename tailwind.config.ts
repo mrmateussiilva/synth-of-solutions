@@ -13,6 +13,12 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'renaissance': ['Cinzel', 'serif'],
+        'manuscript': ['Cormorant Garamond', 'serif'],
+        'decorative': ['Cinzel Decorative', 'serif'],
+        'garamond': ['EB Garamond', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

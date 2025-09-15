@@ -8,44 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    /* Renaissance color palette - pergaminho e dourado */
+    --background: 35 25% 8%;
+    --foreground: 35 15% 85%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 35 20% 10%;
+    --card-foreground: 35 15% 85%;
 
-    --popover: 240 5% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 35 25% 12%;
+    --popover-foreground: 35 15% 85%;
 
-    --primary: 263 70% 50.4%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 40 60% 55%;
+    --primary-foreground: 35 25% 8%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 35 15% 20%;
+    --secondary-foreground: 35 15% 85%;
 
-    --muted: 240 5% 6%;
-    --muted-foreground: 240 4% 46%;
+    --muted: 35 15% 15%;
+    --muted-foreground: 35 10% 60%;
 
-    --accent: 45 93% 58%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 25 80% 65%;
+    --accent-foreground: 35 25% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 35 15% 85%;
 
-    --border: 240 6% 10%;
-    --input: 240 6% 10%;
-    --ring: 263 70% 50.4%;
+    --border: 35 15% 20%;
+    --input: 35 15% 18%;
+    --ring: 40 60% 55%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom artistic variables */
-    --gradient-primary: linear-gradient(135deg, hsl(263, 70%, 50.4%), hsl(280, 80%, 60%));
-    --gradient-accent: linear-gradient(135deg, hsl(45, 93%, 58%), hsl(38, 92%, 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(240, 10%, 3.9%) 0%, hsl(263, 70%, 15%) 50%, hsl(240, 10%, 3.9%) 100%);
-    --glow-primary: 0 0 40px hsl(263, 70%, 50.4% / 0.3);
-    --glow-accent: 0 0 30px hsl(45, 93%, 58% / 0.4);
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --animation-float: float 6s ease-in-out infinite;
+    /* Renaissance artistic variables */
+    --gradient-parchment: linear-gradient(135deg, hsl(35, 25%, 8%) 0%, hsl(35, 20%, 12%) 30%, hsl(40, 30%, 15%) 70%, hsl(35, 25%, 8%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(40, 60%, 55%), hsl(45, 70%, 65%), hsl(40, 60%, 55%));
+    --gradient-manuscript: linear-gradient(180deg, hsl(35, 25%, 8%) 0%, hsl(40, 30%, 12%) 50%, hsl(35, 25%, 8%) 100%);
+    --texture-paper: repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(35, 10%, 20% / 0.1) 2px, hsl(35, 10%, 20% / 0.1) 4px);
+    --glow-gold: 0 0 30px hsl(40, 60%, 55% / 0.4);
+    --glow-amber: 0 0 20px hsl(25, 80%, 65% / 0.3);
+    --transition-renaissance: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-sketch: sketch 8s ease-in-out infinite;
 
     --sidebar-background: 0 0% 98%;
 
@@ -110,41 +112,84 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'EB Garamond', serif;
   }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
 }
 
-@keyframes glow {
-  0%, 100% { box-shadow: var(--glow-primary); }
-  50% { box-shadow: var(--glow-accent); }
+@keyframes sketch {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% { 
+    transform: translateY(-5px) rotate(1deg);
+    opacity: 0.9;
+  }
+  75% { 
+    transform: translateY(5px) rotate(-1deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes manuscript-glow {
+  0%, 100% { box-shadow: var(--glow-gold); }
+  50% { box-shadow: var(--glow-amber); }
+}
+
+@keyframes draw-line {
+  from { 
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  to { 
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
 }
 
 @layer utilities {
-  .gradient-primary {
-    background: var(--gradient-primary);
+  .gradient-parchment {
+    background: var(--gradient-parchment);
   }
   
-  .gradient-accent {
-    background: var(--gradient-accent);
+  .gradient-gold {
+    background: var(--gradient-gold);
   }
   
-  .gradient-hero {
-    background: var(--gradient-hero);
+  .gradient-manuscript {
+    background: var(--gradient-manuscript);
   }
   
-  .animate-float {
-    animation: var(--animation-float);
+  .texture-paper {
+    background-image: var(--texture-paper);
   }
   
-  .glow-primary {
-    box-shadow: var(--glow-primary);
+  .animate-sketch {
+    animation: var(--animation-sketch);
   }
   
-  .transition-smooth {
-    transition: var(--transition-smooth);
+  .glow-gold {
+    box-shadow: var(--glow-gold);
+  }
+  
+  .transition-renaissance {
+    transition: var(--transition-renaissance);
+  }
+  
+  .font-renaissance {
+    font-family: 'Cinzel', serif;
+  }
+  
+  .font-manuscript {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .font-decorative {
+    font-family: 'Cinzel Decorative', serif;
   }
 }
