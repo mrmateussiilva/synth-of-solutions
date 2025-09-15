@@ -14,18 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        'renaissance': ['Cinzel', 'Times New Roman', 'serif'],
-        'manuscript': ['Cormorant Garamond', 'Georgia', 'serif'],
-        'decorative': ['Cinzel Decorative', 'Times New Roman', 'serif'],
-        'garamond': ['EB Garamond', 'Georgia', 'serif'],
-        'elegant': ['Playfair Display', 'Georgia', 'serif'],
-        'code': ['JetBrains Mono', 'Monaco', 'Consolas', 'monospace'],
-        'modern': ['Inter', 'Helvetica Neue', 'sans-serif'],
-      },
-      fontSize: {
-        'hero': ['clamp(2.5rem, 8vw, 6rem)', { lineHeight: '0.9', letterSpacing: '-0.02em' }],
-        'title': ['clamp(1.5rem, 4vw, 3rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
-        'subtitle': ['clamp(1rem, 2vw, 1.5rem)', { lineHeight: '1.4', letterSpacing: '0.01em' }],
+        'renaissance': ['Cinzel', 'serif'],
+        'manuscript': ['Cormorant Garamond', 'serif'],
+        'decorative': ['Cinzel Decorative', 'serif'],
+        'garamond': ['EB Garamond', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",

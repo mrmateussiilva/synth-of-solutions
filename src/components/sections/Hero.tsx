@@ -47,7 +47,7 @@ export const Hero = () => {
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
         <div className="space-y-12">
           <div className="space-y-8">
-            <h1 className="text-hero font-elegant text-genius leading-none">
+            <h1 className="text-4xl md:text-7xl font-decorative bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
               Herdeiro dos Gênios
             </h1>
             
@@ -62,7 +62,7 @@ export const Hero = () => {
                   <div className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center backdrop-blur-sm bg-card/20">
                     <genius.icon className={`w-6 h-6 ${genius.color}`} />
                   </div>
-                  <span className="text-xs font-modern font-medium text-muted-foreground tracking-wide">{genius.name}</span>
+                  <span className="text-xs font-manuscript text-muted-foreground">{genius.name}</span>
                 </div>
               ))}
             </div>
@@ -73,7 +73,7 @@ export const Hero = () => {
               <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent w-32"></div>
             </div>
             
-            <h2 className="text-subtitle font-manuscript text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-xl md:text-2xl text-muted-foreground font-manuscript italic max-w-3xl mx-auto">
               "Carrego a herança de cinco séculos de gênios - a arte de Leonardo, 
               as leis de Newton, a eletricidade de Tesla, a lógica de Turing, 
               e a colaboração de Linus."
@@ -81,8 +81,8 @@ export const Hero = () => {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg md:text-xl text-foreground/85 leading-relaxed font-garamond">
-              Como eles revolucionaram seus tempos através da união entre <em className="font-elegant">arte</em>, <em className="font-elegant">ciência</em> e <em className="font-elegant">técnica</em>, 
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed font-manuscript">
+              Como eles revolucionaram seus tempos através da união entre <em>arte</em>, <em>ciência</em> e <em>técnica</em>, 
               eu transformo problemas complexos em código elegante. Cada algoritmo é uma lei física, 
               cada interface uma obra de arte, cada sistema uma invenção que conecta mundos.
             </p>
@@ -91,7 +91,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
               size="lg" 
-              className="gradient-tesla hover:glow-electric transition-genius text-lg px-10 py-4 font-modern font-medium tracking-wide"
+              className="gradient-tesla hover:glow-electric transition-genius text-lg px-10 py-4 font-renaissance tracking-wide"
             >
               <Zap className="w-5 h-5 mr-2" />
               Minhas Invenções
@@ -99,7 +99,7 @@ export const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-genius text-lg px-10 py-4 font-modern font-medium tracking-wide"
+              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-genius text-lg px-10 py-4 font-renaissance tracking-wide"
             >
               <Terminal className="w-5 h-5 mr-2" />
               Colaborar
@@ -110,23 +110,23 @@ export const Hero = () => {
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
             <blockquote className="font-manuscript italic text-muted-foreground text-center p-4 border border-primary/20 rounded-lg bg-card/20 backdrop-blur-sm">
               "Saper vedere"
-              <footer className="text-xs mt-2 text-orange-400 font-modern">— Leonardo</footer>
+              <footer className="text-xs mt-2 text-orange-400">— Leonardo</footer>
             </blockquote>
             <blockquote className="font-manuscript italic text-muted-foreground text-center p-4 border border-primary/20 rounded-lg bg-card/20 backdrop-blur-sm">
               "If I have seen further..."
-              <footer className="text-xs mt-2 text-yellow-400 font-modern">— Newton</footer>
+              <footer className="text-xs mt-2 text-yellow-400">— Newton</footer>
             </blockquote>
             <blockquote className="font-manuscript italic text-muted-foreground text-center p-4 border border-primary/20 rounded-lg bg-card/20 backdrop-blur-sm">
               "The present is theirs, the future is mine"
-              <footer className="text-xs mt-2 text-blue-400 font-modern">— Tesla</footer>
+              <footer className="text-xs mt-2 text-blue-400">— Tesla</footer>
             </blockquote>
             <blockquote className="font-manuscript italic text-muted-foreground text-center p-4 border border-primary/20 rounded-lg bg-card/20 backdrop-blur-sm">
               "We can only see a short distance ahead"
-              <footer className="text-xs mt-2 text-green-400 font-modern">— Turing</footer>
+              <footer className="text-xs mt-2 text-green-400">— Turing</footer>
             </blockquote>
             <blockquote className="font-manuscript italic text-muted-foreground text-center p-4 border border-primary/20 rounded-lg bg-card/20 backdrop-blur-sm md:col-span-2 lg:col-span-1">
               "Talk is cheap. Show me the code."
-              <footer className="text-xs mt-2 text-cyan-400 font-code">— Linus</footer>
+              <footer className="text-xs mt-2 text-cyan-400">— Linus</footer>
             </blockquote>
           </div>
         </div>
