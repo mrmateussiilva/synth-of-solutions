@@ -115,7 +115,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'EB Garamond', serif;
+    font-family: 'EB Garamond', 'Georgia', serif;
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
@@ -201,14 +205,62 @@ All colors MUST be HSL.
   }
   
   .font-renaissance {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', 'Times New Roman', serif;
+    font-weight: 600;
+    letter-spacing: 0.025em;
   }
   
   .font-manuscript {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
   
   .font-decorative {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
   }
+  
+  .font-elegant {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  
+  .font-code {
+    font-family: 'JetBrains Mono', 'Monaco', 'Consolas', monospace;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+  
+  .font-modern {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Enhanced text styles */
+  .text-genius {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+  
+  .text-hero {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+  }
+  
+  .text-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.01em;
+  }
+}
 }

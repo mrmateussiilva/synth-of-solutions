@@ -49,7 +49,7 @@ export const About = () => {
             <span className="text-accent text-3xl font-decorative">∞</span>
             <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent w-32"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-renaissance bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
+          <h2 className="text-title font-elegant text-genius mb-6">
             A Linhagem dos Gênios
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-manuscript italic">
