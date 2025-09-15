@@ -8,46 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Renaissance color palette - pergaminho e dourado */
-    --background: 35 25% 8%;
-    --foreground: 35 15% 85%;
+    /* Paleta universal dos gênios - energia, cosmos, terra */
+    --background: 25 15% 8%;
+    --foreground: 35 15% 90%;
 
-    --card: 35 20% 10%;
-    --card-foreground: 35 15% 85%;
+    --card: 25 20% 10%;
+    --card-foreground: 35 15% 90%;
 
-    --popover: 35 25% 12%;
-    --popover-foreground: 35 15% 85%;
+    --popover: 25 25% 12%;
+    --popover-foreground: 35 15% 90%;
 
-    --primary: 40 60% 55%;
-    --primary-foreground: 35 25% 8%;
+    --primary: 200 70% 60%;
+    --primary-foreground: 25 15% 8%;
 
-    --secondary: 35 15% 20%;
-    --secondary-foreground: 35 15% 85%;
+    --secondary: 25 15% 20%;
+    --secondary-foreground: 35 15% 90%;
 
-    --muted: 35 15% 15%;
-    --muted-foreground: 35 10% 60%;
+    --muted: 25 15% 15%;
+    --muted-foreground: 25 10% 60%;
 
-    --accent: 25 80% 65%;
-    --accent-foreground: 35 25% 8%;
+    --accent: 45 85% 60%;
+    --accent-foreground: 25 15% 8%;
 
     --destructive: 0 70% 50%;
-    --destructive-foreground: 35 15% 85%;
+    --destructive-foreground: 35 15% 90%;
 
-    --border: 35 15% 20%;
-    --input: 35 15% 18%;
-    --ring: 40 60% 55%;
+    --border: 25 15% 20%;
+    --input: 25 15% 18%;
+    --ring: 200 70% 60%;
 
     --radius: 0.5rem;
 
-    /* Renaissance artistic variables */
-    --gradient-parchment: linear-gradient(135deg, hsl(35, 25%, 8%) 0%, hsl(35, 20%, 12%) 30%, hsl(40, 30%, 15%) 70%, hsl(35, 25%, 8%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(40, 60%, 55%), hsl(45, 70%, 65%), hsl(40, 60%, 55%));
-    --gradient-manuscript: linear-gradient(180deg, hsl(35, 25%, 8%) 0%, hsl(40, 30%, 12%) 50%, hsl(35, 25%, 8%) 100%);
-    --texture-paper: repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(35, 10%, 20% / 0.1) 2px, hsl(35, 10%, 20% / 0.1) 4px);
-    --glow-gold: 0 0 30px hsl(40, 60%, 55% / 0.4);
-    --glow-amber: 0 0 20px hsl(25, 80%, 65% / 0.3);
-    --transition-renaissance: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    --animation-sketch: sketch 8s ease-in-out infinite;
+    /* Paleta dos gênios universais */
+    --gradient-cosmos: linear-gradient(135deg, hsl(25, 15%, 8%) 0%, hsl(240, 30%, 15%) 30%, hsl(200, 40%, 20%) 70%, hsl(25, 15%, 8%) 100%);
+    --gradient-tesla: linear-gradient(135deg, hsl(200, 70%, 60%), hsl(240, 80%, 70%), hsl(280, 60%, 60%));
+    --gradient-newton: linear-gradient(135deg, hsl(45, 85%, 60%), hsl(60, 90%, 70%), hsl(45, 85%, 60%));
+    --gradient-leonardo: linear-gradient(135deg, hsl(25, 60%, 50%), hsl(35, 70%, 60%), hsl(40, 65%, 55%));
+    --gradient-turing: linear-gradient(135deg, hsl(120, 50%, 40%), hsl(140, 60%, 50%), hsl(160, 55%, 45%));
+    --gradient-linus: linear-gradient(135deg, hsl(220, 60%, 50%), hsl(200, 70%, 60%), hsl(180, 65%, 55%));
+    --texture-universal: repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(25, 10%, 20% / 0.1) 2px, hsl(25, 10%, 20% / 0.1) 4px);
+    --glow-electric: 0 0 30px hsl(200, 70%, 60% / 0.4);
+    --glow-golden: 0 0 20px hsl(45, 85%, 60% / 0.3);
+    --transition-genius: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-physics: physics 10s ease-in-out infinite;
 
     --sidebar-background: 0 0% 98%;
 
@@ -121,64 +124,80 @@ All colors MUST be HSL.
   50% { transform: translateY(-15px) rotate(2deg); }
 }
 
-@keyframes sketch {
+@keyframes physics {
   0%, 100% { 
     transform: translateY(0px) rotate(0deg);
-    opacity: 0.7;
+    opacity: 0.8;
   }
   25% { 
-    transform: translateY(-5px) rotate(1deg);
+    transform: translateY(-8px) rotate(2deg);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(0px) rotate(0deg);
     opacity: 0.9;
   }
   75% { 
-    transform: translateY(5px) rotate(-1deg);
-    opacity: 0.8;
+    transform: translateY(8px) rotate(-2deg);
+    opacity: 1;
   }
 }
 
-@keyframes manuscript-glow {
-  0%, 100% { box-shadow: var(--glow-gold); }
-  50% { box-shadow: var(--glow-amber); }
+@keyframes electric-pulse {
+  0%, 100% { box-shadow: var(--glow-electric); }
+  50% { box-shadow: var(--glow-golden); }
 }
 
-@keyframes draw-line {
+@keyframes code-flow {
   from { 
-    stroke-dashoffset: 1000;
+    transform: translateX(-100%);
     opacity: 0;
   }
   to { 
-    stroke-dashoffset: 0;
+    transform: translateX(100%);
     opacity: 1;
   }
 }
 
 @layer utilities {
-  .gradient-parchment {
-    background: var(--gradient-parchment);
+  .gradient-cosmos {
+    background: var(--gradient-cosmos);
   }
   
-  .gradient-gold {
-    background: var(--gradient-gold);
+  .gradient-tesla {
+    background: var(--gradient-tesla);
   }
   
-  .gradient-manuscript {
-    background: var(--gradient-manuscript);
+  .gradient-newton {
+    background: var(--gradient-newton);
   }
   
-  .texture-paper {
-    background-image: var(--texture-paper);
+  .gradient-leonardo {
+    background: var(--gradient-leonardo);
   }
   
-  .animate-sketch {
-    animation: var(--animation-sketch);
+  .gradient-turing {
+    background: var(--gradient-turing);
   }
   
-  .glow-gold {
-    box-shadow: var(--glow-gold);
+  .gradient-linus {
+    background: var(--gradient-linus);
   }
   
-  .transition-renaissance {
-    transition: var(--transition-renaissance);
+  .texture-universal {
+    background-image: var(--texture-universal);
+  }
+  
+  .animate-physics {
+    animation: var(--animation-physics);
+  }
+  
+  .glow-electric {
+    box-shadow: var(--glow-electric);
+  }
+  
+  .transition-genius {
+    transition: var(--transition-genius);
   }
   
   .font-renaissance {
